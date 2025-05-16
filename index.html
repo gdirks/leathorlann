@@ -2,10 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; URL='home.html'" />
-  <title>Redirecting...</title>
+  <title>Loading...</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+      font-family: sans-serif;
+    }
+    img {
+      max-width: 200px;
+    }
+    nav {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      background: #333;
+    }
+    .menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .menu > li {
+      position: relative;
+    }
+    .menu > li > a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+    }
+    .submenu {
+      display: none;
+      position: absolute;
+      background: #444;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      top: 100%;
+      left: 0;
+    }
+    .submenu li a {
+      padding: 10px 20px;
+      display: block;
+      color: white;
+      text-decoration: none;
+    }
+    .menu li:hover .submenu {
+      display: block;
+    }
+  </style>
+  <script>
+    setTimeout(function() {
+      window.location.href = "about.html";
+    }, 6000); // Redirect after 6 seconds
+  </script>
 </head>
 <body>
-  <p>If you are not redirected, <a href="home.html">click here</a>.</p>
+  <nav>
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li>
+        <a href="#">Services</a>
+        <ul class="submenu">
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">SEO</a></li>
+          <li><a href="#">Hosting</a></li>
+        </ul>
+      </li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <div>
+    <img src="loading.jpg" alt="Loading..." />
+    <p>Loading, please wait...</p>
+  </div>
 </body>
 </html>
