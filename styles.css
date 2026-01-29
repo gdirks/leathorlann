@@ -13,21 +13,25 @@ p {
 
 .navbar {
   overflow: hidden;
-  background-color: #333; 
+  background-color: #333;
 }
 
 .navbar a {
   float: left;
   font-size: 16px;
   color: white;
+  border: 2px solid black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  border-top-left-radius: 1em 1em; /* rounded corner! */
+  border-top-right-radius: 1em 1em; /* another rounded corner! */
 }
 
 .subnav {
   float: left;
   overflow: hidden;
+   border: 2px solid black;
 }
 
 .subnav .subnavbtn {
@@ -41,15 +45,16 @@ p {
   margin: 0;
 }
 
-.navbar a:hover, .subnav:hover .subnavbtn {
-  background-color: red;
+
+.navbar a:hover, .subnav:hover .subnavbtn{
+    background-color: maroon;;
 }
 
 .subnav-content {
   display: none;
   position: absolute;
   left: 0;
-  background-color: red;
+  background-color: maroon;
   width: 100%;
   z-index: 1;
 }
@@ -62,7 +67,7 @@ p {
 
 .subnav-content a:hover {
   background-color: #eee;
-  color: black;
+  color: navy;
 }
 
 .subnav:hover .subnav-content {
