@@ -1,36 +1,70 @@
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
 
-nav {
-    background-color: #333;
-    color: white;
-    padding: 1em;
+p {
+    text-overflow: ellipsis; /* will make [...] at the end */
+    width: device-width; /* change to your preferences */
+    max-width: 63ch;
+    white-space: wrap; /* paragraph to one line */
+    overflow:hidden; /* older browsers */
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+.navbar {
+  overflow: hidden;
+  background-color: #333; 
 }
 
-nav ul li {
-    margin-right: 1em;
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+.subnav {
+  float: left;
+  overflow: hidden;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
 }
 
-.content {
-    padding: 2em;
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: red;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
 }
