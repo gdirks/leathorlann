@@ -1,9 +1,9 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 p {
+    left-margin: 1em;
     text-overflow: ellipsis; /* will make [...] at the end */
     width: device-width; /* change to your preferences */
     max-width: 63ch;
@@ -50,7 +50,7 @@ p {
     background-color: maroon;;
 }
 
-.subnav-content {
+.subnav-content{
   display: none;
   position: absolute;
   left: 0;
